@@ -9,7 +9,7 @@
     },
     "developer": {
         "name": "Adam Rusling",
-        "websiteUrl": "https://www.contoso.com",
+        "websiteUrl": "https://github.com/adamrusling",
         "privacyUrl": "https://www.contoso.com/privacy",
         "termsOfUseUrl": "https://www.contoso.com/servicesagreement"
     },
@@ -18,8 +18,8 @@
         "full": "MMU DLP Add-in"
     },
     "description": {
-        "short": "A template to get started.",
-        "full": "This is the template to get started."
+        "short": "DLP Add-in for Microsoft Outlook.",
+        "full": "The DLP Add-in for Outlook scans an email's subject and body, along with supported file attachments, for potential personally identifiable and protected health information before sending."
     },
     "icons": {
         "outline": "assets/outline.png",
