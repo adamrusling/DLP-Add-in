@@ -1,0 +1,338 @@
+/* 
+ * Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license.
+ * See LICENSE in the project root for license information.
+ */
+
+ :root {
+     --taskpane-text: #323130;
+     --taskpane-background: #ffffff;
+     --taskpane-muted-text: #605e5c;
+     --taskpane-border: #a19f9d;
+     --taskpane-table-header: #f3f2f1;
+    --taskpane-header-background: #f3f2f1;
+     --risk-low-bg: #eef7ee;
+     --risk-low-text: #2e7d32;
+     --risk-low-border: #bfe3c0;
+     --risk-medium-bg: #fdf8e6;
+     --risk-medium-text: #8a6d00;
+     --risk-medium-border: #ecdd9b;
+     --risk-high-bg: #fdf1e6;
+     --risk-high-text: #a15c00;
+     --risk-high-border: #f0d3ac;
+     --risk-very-high-bg: #fde4d0;
+     --risk-very-high-text: #8c3a00;
+     --risk-very-high-border: #ee9a5a;
+     --risk-critical-bg: #fbeaea;
+     --risk-critical-text: #a4262c;
+     --risk-critical-border: #f1c3c5;
+ }
+
+ @media (prefers-color-scheme: dark) {
+     :root {
+         --taskpane-text: #f3f2f1;
+         --taskpane-background: #1b1a19;
+         --taskpane-muted-text: #c8c6c4;
+         --taskpane-border: #edebe9;
+         --taskpane-table-header: #2b2b2b;
+         --taskpane-header-background: #3b3a39;
+         --risk-low-bg: #1c2b1c;
+         --risk-low-text: #8fd39a;
+         --risk-low-border: #2f4a30;
+         --risk-medium-bg: #2b2617;
+         --risk-medium-text: #e0c975;
+         --risk-medium-border: #4a4022;
+         --risk-high-bg: #2c2115;
+         --risk-high-text: #e6ac6a;
+         --risk-high-border: #4a3620;
+         --risk-very-high-bg: #3a2010;
+         --risk-very-high-text: #ff9a52;
+         --risk-very-high-border: #7a3d10;
+         --risk-critical-bg: #2c1a1b;
+         --risk-critical-text: #e58f92;
+         --risk-critical-border: #4a2426;
+     }
+ }
+
+ html,
+ body {
+     width: 100%;
+     height: 100%;
+     margin: 0;
+     padding: 0;
+     color: var(--taskpane-text);
+     background: var(--taskpane-background);
+     color-scheme: light dark;
+ }
+ 
+ ul {
+     margin: 0;
+     padding: 0;
+ }
+ 
+ .ms-welcome__header {
+    padding: 20px;
+     background-color: var(--taskpane-header-background);
+     color: var(--taskpane-text);
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+ }
+
+ .help-page-header {
+     padding: 8px 20px;
+ }
+
+ .ms-welcome__main {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex: 1 0 0;
+    flex: 1 0 0;
+    padding: 10px 20px;
+ }
+ 
+ .ms-welcome__main > h2 {
+     width: 100%;
+     text-align: center;
+ }
+ 
+ .ms-welcome__features {
+     list-style-type: none;
+     margin-top: 20px;
+ }
+ 
+ .ms-welcome__features.ms-List .ms-ListItem {
+     padding-bottom: 20px;
+     display: -webkit-flex;
+     display: flex;
+ }
+ 
+ .ms-welcome__features.ms-List .ms-ListItem > .ms-Icon {
+     margin-right: 10px;
+ }
+ 
+ .ms-welcome__action.ms-Button--hero {
+     margin-top: 30px;
+ }
+ 
+.ms-Button.ms-Button--hero .ms-Button-label {
+  color: #0078d7;
+}
+
+.ms-Button.ms-Button--hero:hover .ms-Button-label,
+.ms-Button.ms-Button--hero:focus .ms-Button-label{
+  color: #005a9e;
+  cursor: pointer;
+}
+
+#howto-guide-btn,
+#scan-email-btn {
+    margin: 4px 0 12px;
+    padding: 8px 14px;
+    border: 1px solid var(--taskpane-border);
+    border-radius: 4px;
+    color: var(--taskpane-text);
+    background: var(--taskpane-background);
+    cursor: pointer;
+}
+
+#back-bar {
+    padding: 12px 20px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+
+#back-btn {
+    margin: 0;
+    padding: 8px 14px;
+    border: 1px solid var(--taskpane-border);
+    border-radius: 4px;
+    color: var(--taskpane-text);
+    background: var(--taskpane-background);
+    cursor: pointer;
+}
+
+#guide-body,
+#howto-guide-output,
+#help-output {
+    color: var(--taskpane-text);
+    background: var(--taskpane-background);
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    font-family: Segoe UI, Arial, sans-serif;
+}
+
+#howto-guide-output,
+#help-output {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px 12px;
+}
+
+#help-output table,
+#help-output td,
+#help-output th {
+    border: 1px solid var(--taskpane-border);
+}
+
+#help-output td,
+#help-output th {
+    padding: 4px 8px;
+}
+
+#help-output table {
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 12px;
+}
+
+#help-output th {
+    background: var(--taskpane-table-header);
+}
+
+#help-output td:nth-child(2),
+#help-output th:nth-child(2) {
+    text-align: center;
+}
+
+#help-output pre {
+    color: var(--taskpane-text);
+    background: var(--taskpane-background);
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    font-family: Segoe UI, Arial, sans-serif;
+    margin: 0 0 12px;
+}
+
+#output {
+    color: var(--taskpane-text);
+    background: var(--taskpane-background);
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    font-family: Segoe UI, Arial, sans-serif;
+    max-width: 100%;
+}
+
+#output pre,
+#output table,
+#output ul,
+#output p {
+    color: var(--taskpane-text);
+    background: var(--taskpane-background);
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+#output table,
+#output td,
+#output th {
+    border: 1px solid var(--taskpane-border);
+}
+
+#output td,
+#output th {
+    padding: 4px 8px;
+}
+
+#output table td:nth-child(3),
+#output table td:nth-child(4),
+#output table th:nth-child(3),
+#output table th:nth-child(4) {
+    text-align: center;
+}
+
+#output th {
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+#output details,
+#output summary,
+#output li {
+    color: var(--taskpane-text);
+}
+
+#output .detected-categories {
+    color: var(--taskpane-text);
+    background: var(--taskpane-background);
+    border: none;
+    padding: 8px;
+    margin-top: 12px;
+    display: block;
+}
+
+#output .output-section-heading {
+    font-weight: 700;
+    color: var(--taskpane-text);
+    margin-bottom: 8px;
+}
+
+#output .detected-categories table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+#output table th {
+    background: var(--taskpane-table-header);
+}
+
+.risk-band {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    font-weight: 600;
+}
+
+#output .risk-band--low,
+#help-output .risk-band--low {
+    background: var(--risk-low-bg);
+    color: var(--risk-low-text);
+    border-color: var(--risk-low-border);
+}
+
+#output .risk-band--medium,
+#help-output .risk-band--medium {
+    background: var(--risk-medium-bg);
+    color: var(--risk-medium-text);
+    border-color: var(--risk-medium-border);
+}
+
+#output .risk-band--high,
+#help-output .risk-band--high {
+    background: var(--risk-high-bg);
+    color: var(--risk-high-text);
+    border-color: var(--risk-high-border);
+}
+
+#output .risk-band--very-high,
+#help-output .risk-band--very-high {
+    background: var(--risk-very-high-bg);
+    color: var(--risk-very-high-text);
+    border-color: var(--risk-very-high-border);
+}
+
+#output .risk-band--critical,
+#help-output .risk-band--critical {
+    background: var(--risk-critical-bg);
+    color: var(--risk-critical-text);
+    border-color: var(--risk-critical-border);
+}
+
+b {
+    font-weight: bold;
+}
